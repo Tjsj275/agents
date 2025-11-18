@@ -123,7 +123,7 @@ Handler Statistics:
   - fillers_ignored: 3
   -real_interruptions: 3
   - low_confidence_ignored: 1
-  - ignore_rate: 33.33% ``` </pre>
+  - ignore_rate: 33.33%
 ```
 
 ## 🏁 Submission Notes
