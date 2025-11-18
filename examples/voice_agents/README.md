@@ -1,6 +1,5 @@
 # 🗣️ LiveKit Voice Agent — Intelligent Filler Word Interruption Handler
 ## NSUT Step-2 Assignment Submission
----
 
 This project implements an intelligent real-time interruption handler for LiveKit voice agents.
 
@@ -12,7 +11,6 @@ This folder includes:
   - `voice_agent.py` – fully integrated LiveKit agent
   - `test_suite.py` – full unit & integration test suite
 The solution meets all assignment requirements and includes optional bonus features.
----
 
 ## ⭐ Features Implemented
 
