@@ -1,6 +1,6 @@
-🗣️ LiveKit Voice Agent — Intelligent Filler Word Interruption Handler
+# 🗣️ LiveKit Voice Agent — Intelligent Filler Word Interruption Handler
 
-NSUT Step-2 Assignment Submission
+## NSUT Step-2 Assignment Submission
 ---
 
 This project implements an intelligent real-time interruption handler for LiveKit voice agents.
