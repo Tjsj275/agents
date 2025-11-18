@@ -1,78 +1,118 @@
-# Voice Agents Examples
+#🗣️ LiveKit Voice Agent — Intelligent Filler Word Interruption Handler
+##NSUT Step-2 Assignment Submission
+---
 
-This directory contains a comprehensive collection of voice-based agent examples demonstrating various capabilities and integrations with the LiveKit Agents framework.
+This project implements an intelligent real-time interruption handler for LiveKit voice agents.
+It filters conversational filler words like “umm”, “uh”, “hmm”, and “haan” while the agent is speaking, and only stops TTS when the user speaks a meaningful interruption.
 
-## 📋 Table of Contents
+This folder includes:
 
-### 🚀 Getting Started
+-`filler_handler.py` – interruption logic
+-`voice_agent.py` – fully integrated LiveKit agent
+-`test_suite.py` – full unit & integration test suite
+The solution meets all assignment requirements and includes optional bonus features.
+---
 
-- [`basic_agent.py`](./basic_agent.py) - A fundamental voice agent with metrics collection
+##⭐ Features Implemented
 
-### 🛠️ Tool Integration & Function Calling
+###✅ Core Requirements
+-Ignores fillers when agent is speaking
+-Accepts fillers when agent is quiet
+-Stops TTS immediately on real interruptions
+-Clean classification into:
+  -`FILLER_ONLY`
+  -`REAL_INTERRUPTION`
+  -`MIXED`
+  -`UNKNOWN`
+-Fully async and thread-safe
+-No modification to LiveKit VAD or SDK internals
+-Works naturally within LiveKit's transcription stream
 
-- [`annotated_tool_args.py`](./annotated_tool_args.py) - Using Python type annotations for tool arguments
-- [`dynamic_tool_creation.py`](./dynamic_tool_creation.py) - Creating and registering tools dynamically at runtime
-- [`raw_function_description.py`](./raw_function_description.py) - Using raw JSON schema definitions for tool descriptions
-- [`silent_function_call.py`](./silent_function_call.py) - Executing function calls without verbal responses to user
-- [`long_running_function.py`](./long_running_function.py) - Handling long running function calls with interruption support
+###🎁 Bonus Features
+-Dynamic filler-word updates (`add`, `remove`, `update`)
+-Confidence thresholding for noisy ASR
+-Unicode & multilingual support (e.g., "हाँ", "acha")
+-Statistics tracking (ignored fillers, interruptions, event counts)
+-Complete automated test suite (unit + integration)
+---
 
-### ⚡ Real-time Models
+##Project Structure
+<pre> ``` voice_agents/ ├── filler_handler.py ├── voice_agent.py ├── test_suite.py └── README.md ``` </pre>
+---
 
-- [`weather_agent.py`](./weather_agent.py) - OpenAI Realtime API with function calls for weather information
-- [`realtime_video_agent.py`](./realtime_video_agent.py) - Google Gemini with multimodal video and voice capabilities
-- [`realtime_joke_teller.py`](./realtime_joke_teller.py) - Amazon Nova Sonic real-time model with function calls
-- [`realtime_load_chat_history.py`](./realtime_load_chat_history.py) - Loading previous chat history into real-time models
-- [`realtime_turn_detector.py`](./realtime_turn_detector.py) - Using LiveKit's turn detection with real-time models
-- [`realtime_with_tts.py`](./realtime_with_tts.py) - Combining external TTS providers with real-time models
+##⚙️ Installation & Setup
 
-### 🎯 Pipeline Nodes & Hooks
+###1️⃣ Navigate to the correct folder
+<pre> ``` cd agents/python/examples/voice_agents ``` </pre>
 
-- [`fast-preresponse.py`](./fast-preresponse.py) - Generating quick responses using the `on_user_turn_completed` node
-- [`flush_llm_node.py`](./flush_llm_node.py) - Flushing partial LLM output to TTS in `llm_node`
-- [`structured_output.py`](./structured_output.py) - Structured data and JSON outputs from agent responses
-- [`speedup_output_audio.py`](./speedup_output_audio.py) - Dynamically adjusting agent audio playback speed
-- [`timed_agent_transcript.py`](./timed_agent_transcript.py) - Reading timestamped transcripts from `transcription_node`
-- [`inactive_user.py`](./inactive_user.py) - Handling inactive users with the `user_state_changed` event hook
-- [`resume_interrupted_agent.py`](./resume_interrupted_agent.py) - Resuming agent speech after false interruption detection
-- [`toggle_io.py`](./toggle_io.py) - Dynamically toggling audio input/output during conversations
+###2️⃣ (Optional) Install dependencies
+<pre> ``` pip install -r requirements.txt ``` </pre>
 
-### 🤖 Multi-agent & AgentTask Use Cases
+###If missing, install manually:
+<pre> ``` pip install livekit-agents openai ``` </pre>
+---
 
-- [`restaurant_agent.py`](./restaurant_agent.py) - Multi-agent system for restaurant ordering and reservation management
-- [`multi_agent.py`](./multi_agent.py) - Collaborative storytelling with multiple specialized agents
-- [`email_example.py`](./email_example.py) - Using AgentTask to collect and validate email addresses
+##🔧 Environment Variables (Optional)
 
-### 🔗 MCP & External Integrations
+###Add these to .env:
+<pre> ``` LIVEKIT_URL=wss://your-livekit-server.com LIVEKIT_API_KEY=your_api_key LIVEKIT_API_SECRET=your_secret IGNORED_FILLER_WORDS=uh,um,umm,hmm,haan,mhmm,ah,er CONFIDENCE_THRESHOLD=0.6 ``` </pre>
+These are optional — defaults are applied without them.
+---
 
-- [`web_search.py`](./web_search.py) - Integrating web search capabilities into voice agents
-- [`langgraph_agent.py`](./langgraph_agent.py) - LangGraph integration
-- [`mcp/`](./mcp/) - Model Context Protocol (MCP) integration examples
-  - [`mcp-agent.py`](./mcp/mcp-agent.py) - MCP agent integration
-  - [`server.py`](./mcp/server.py) - MCP server example
-- [`zapier_mcp_integration.py`](./zapier_mcp_integration.py) - Automating workflows with Zapier through MCP
+##🧪 Running Tests
 
-### 💾 RAG & Knowledge Management
+###▶ Run Unit Tests
+<pre> ``` python test_suite.py --unit ``` </pre>
 
-- [`llamaindex-rag/`](./llamaindex-rag/) - Complete RAG implementation with LlamaIndex
-  - [`chat_engine.py`](./llamaindex-rag/chat_engine.py) - Chat engine integration
-  - [`query_engine.py`](./llamaindex-rag/query_engine.py) - Query engine used in a function tool
-  - [`retrieval.py`](./llamaindex-rag/retrieval.py) - Document retrieval
+###▶ Run Integration Tests
+<pre> ``` python test_suite.py --integration ``` </pre>
 
-### 🎵 Specialized Use Cases
+###▶ Run All Tests
+<pre> ``` python test_suite.py ``` </pre>
 
-- [`background_audio.py`](./background_audio.py) - Playing background audio or ambient sounds during conversations
-- [`push_to_talk.py`](./push_to_talk.py) - Push-to-talk interaction
-- [`tts_text_pacing.py`](./tts_text_pacing.py) - Pacing control for TTS requests
-- [`speaker_id_multi_speaker.py`](./speaker_id_multi_speaker.py) - Multi-speaker identification
+####Integration Scenarios Covered
+-Filler during agent speech
+-Real interruption
+-Filler when agent quiet
+-Mixed filler + command
+-Low confidence murmurs
+-Rapid turn-taking
+-Multiple filler sequences
+---
 
-### 📊 Tracing & Error Handling
+##🎙️ Running the LiveKit Voice Agent
 
-- [`langfuse_trace.py`](./langfuse_trace.py) - LangFuse integration for conversation tracing
-- [`error_callback.py`](./error_callback.py) - Error handling callback
-- [`session_close_callback.py`](./session_close_callback.py) - Session lifecycle management
+###▶ Start LiveKit Worker
+<pre> ``` python voice_agent.py start ``` </pre>
 
-## 📖 Additional Resources
+###▶ Test Mode (no LiveKit needed)
+<pre> ``` python voice_agent.py --test ``` </pre>
+---
 
-- [LiveKit Agents Documentation](https://docs.livekit.io/agents/)
-- [Agents Starter Example](https://github.com/livekit-examples/agent-starter-python)
-- [More Agents Examples](https://github.com/livekit-examples/python-agents-examples)
+##🧠 Interruption Logic Overview
+
+<pre> ``` if agent_is_speaking: if confidence < threshold: ignore if filler_only: ignore if mixed or real: interrupt (stop TTS) else: accept all input (filler or real) ``` </pre>
+---
+
+##📊 Example Test Output
+
+<pre> ``` Scenario 1: PASSED Scenario 2: PASSED Scenario 3: PASSED Scenario 4: PASSED Scenario 5: PASSED Scenario 6: PASSED Scenario 7: PASSED Handler Statistics: total_events: 9 fillers_ignored: 3 real_interruptions: 3 low_confidence_ignored: 1 ignore_rate: 33.33% ``` </pre>
+---
+
+##🏁 Submission Notes
+
+This branch contains:
+-✔ FillerWordHandler implementation
+-✔ LiveKit voice agent with proper integration
+-✔ Automated tests (unit + integration)
+-✔ Logging, confidence filtering, and warning messages
+-✔ Assignment documentation (README)
+
+All required + bonus tasks have been implemented successfully.
+---
+
+##👤 Author
+
+**Tejas Joshi**
+Netaji Subhas University of Technology
+LiveKit Intelligent Interruption Handler — Step-2 Assignment
