@@ -35,7 +35,9 @@ The solution meets all assignment requirements and includes optional bonus featu
   - Complete automated test suite (unit + integration)
 
 ## Project Structure
-<pre> ``` voice_agents/ ├── filler_handler.py ├── voice_agent.py ├── test_suite.py └── README.md ``` </pre>
+<pre> ``` 
+  voice_agents/ ├── filler_handler.py ├── voice_agent.py ├── test_suite.py └── README.md 
+  ``` </pre>
 
 ## ⚙️ Installation & Setup
 
