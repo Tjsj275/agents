@@ -123,11 +123,11 @@ Scenario 5: PASSED
 Scenario 6: PASSED
 Scenario 7: PASSED
 Handler Statistics:
-  - total_events: 9
-  - fillers_ignored: 3
-  -real_interruptions: 3
-  - low_confidence_ignored: 1
-  - ignore_rate: 33.33%
+  total_events: 9
+  fillers_ignored: 3
+  real_interruptions: 3
+  low_confidence_ignored: 1
+  ignore_rate: 33.33%
 ```
 
 ## 🏁 Submission Notes
