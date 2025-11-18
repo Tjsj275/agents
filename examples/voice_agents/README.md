@@ -36,7 +36,11 @@ The solution meets all assignment requirements and includes optional bonus featu
 
 ## Project Structure
 ``` 
-  voice_agents/ ├── filler_handler.py ├── voice_agent.py ├── test_suite.py └── README.md 
+  voice_agents/
+├── filler_handler.py
+├── voice_agent.py
+├── test_suite.py
+└── README.md 
 ``` 
 
 ## ⚙️ Installation & Setup
