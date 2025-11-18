@@ -15,25 +15,24 @@ The solution meets all assignment requirements and includes optional bonus featu
 ## ⭐ Features Implemented
 
 ### ✅ Core Requirements
--Ignores fillers when agent is speaking
--Accepts fillers when agent is quiet
--Stops TTS immediately on real interruptions
--Clean classification into:
-  -`FILLER_ONLY`
-  -`REAL_INTERRUPTION`
-  -`MIXED`
-  -`UNKNOWN`
--Fully async and thread-safe
--No modification to LiveKit VAD or SDK internals
--Works naturally within LiveKit's transcription stream
+  -Ignores fillers when agent is speaking
+  -Accepts fillers when agent is quiet
+  -Stops TTS immediately on real interruptions
+  -Clean classification into:
+    -`FILLER_ONLY`
+    -`REAL_INTERRUPTION`
+    -`MIXED`
+    -`UNKNOWN`
+  -Fully async and thread-safe
+  -No modification to LiveKit VAD or SDK internals
+  -Works naturally within LiveKit's transcription stream
 
-###🎁 Bonus Features
--Dynamic filler-word updates (`add`, `remove`, `update`)
--Confidence thresholding for noisy ASR
--Unicode & multilingual support (e.g., "हाँ", "acha")
--Statistics tracking (ignored fillers, interruptions, event counts)
--Complete automated test suite (unit + integration)
----
+### 🎁 Bonus Features
+  -Dynamic filler-word updates (`add`, `remove`, `update`)
+  -Confidence thresholding for noisy ASR
+  -Unicode & multilingual support (e.g., "हाँ", "acha")
+  -Statistics tracking (ignored fillers, interruptions, event counts)
+  -Complete automated test suite (unit + integration)
 
 ##Project Structure
 <pre> ``` voice_agents/ ├── filler_handler.py ├── voice_agent.py ├── test_suite.py └── README.md ``` </pre>
