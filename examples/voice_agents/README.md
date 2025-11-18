@@ -15,17 +15,17 @@ The solution meets all assignment requirements and includes optional bonus featu
 ## ⭐ Features Implemented
 
 ### ✅ Core Requirements
-  -Ignores fillers when agent is speaking
-  -Accepts fillers when agent is quiet
-  -Stops TTS immediately on real interruptions
-  -Clean classification into:
-    -`FILLER_ONLY`
-    -`REAL_INTERRUPTION`
-    -`MIXED`
-    -`UNKNOWN`
-  -Fully async and thread-safe
-  -No modification to LiveKit VAD or SDK internals
-  -Works naturally within LiveKit's transcription stream
+  - Ignores fillers when agent is speaking
+  - Accepts fillers when agent is quiet
+  - Stops TTS immediately on real interruptions
+  - Clean classification into:
+    - `FILLER_ONLY`
+    - `REAL_INTERRUPTION`
+    - `MIXED`
+    - `UNKNOWN`
+  - Fully async and thread-safe
+  - No modification to LiveKit VAD or SDK internals
+  - Works naturally within LiveKit's transcription stream
 
 ### 🎁 Bonus Features
   -Dynamic filler-word updates (`add`, `remove`, `update`)
