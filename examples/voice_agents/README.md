@@ -6,18 +6,17 @@ This project implements an intelligent real-time interruption handler for LiveKi
 
 It filters conversational filler words like “umm”, “uh”, “hmm”, and “haan” while the agent is speaking, and only stops TTS when the user speaks a meaningful interruption.
 
-
 This folder includes:
 
--`filler_handler.py` – interruption logic
--`voice_agent.py` – fully integrated LiveKit agent
--`test_suite.py` – full unit & integration test suite
+  - `filler_handler.py` – interruption logic
+  - `voice_agent.py` – fully integrated LiveKit agent
+  - `test_suite.py` – full unit & integration test suite
 The solution meets all assignment requirements and includes optional bonus features.
 ---
 
-##⭐ Features Implemented
+## ⭐ Features Implemented
 
-###✅ Core Requirements
+### ✅ Core Requirements
 -Ignores fillers when agent is speaking
 -Accepts fillers when agent is quiet
 -Stops TTS immediately on real interruptions
