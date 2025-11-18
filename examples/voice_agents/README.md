@@ -35,25 +35,33 @@ The solution meets all assignment requirements and includes optional bonus featu
   - Complete automated test suite (unit + integration)
 
 ## Project Structure
-<pre> ``` 
+``` 
   voice_agents/ ├── filler_handler.py ├── voice_agent.py ├── test_suite.py └── README.md 
-  ``` </pre>
+  ``` 
 
 ## ⚙️ Installation & Setup
 
 ### 1️⃣ Navigate to the correct folder
-<pre> ```cd agents/python/examples/voice_agents``` </pre>
+```
+  cd agents/python/examples/voice_agents
+```
 
 ### 2️⃣ (Optional) Install dependencies
-<pre> ``` pip install -r requirements.txt ``` </pre>
+```
+pip install -r requirements.txt 
+``` 
 
 ### If missing, install manually:
-<pre> ``` pip install livekit-agents openai ``` </pre>
+``` 
+pip install livekit-agents openai
+``` 
 
 ## 🔧 Environment Variables (Optional)
 
 ### Add these to .env:
-<pre> ``` LIVEKIT_URL=wss://your-livekit-server.com LIVEKIT_API_KEY=your_api_key LIVEKIT_API_SECRET=your_secret IGNORED_FILLER_WORDS=uh,um,umm,hmm,haan,mhmm,ah,er CONFIDENCE_THRESHOLD=0.6 ``` </pre>
+```
+LIVEKIT_URL=wss://your-livekit-server.com LIVEKIT_API_KEY=your_api_key LIVEKIT_API_SECRET=your_secret IGNORED_FILLER_WORDS=uh,um,umm,hmm,haan,mhmm,ah,er CONFIDENCE_THRESHOLD=0.6 
+``` 
 These are optional — defaults are applied without them.
 
 ## 🧪 Running Tests
