@@ -4,7 +4,9 @@
 ---
 
 This project implements an intelligent real-time interruption handler for LiveKit voice agents.
+
 It filters conversational filler words like “umm”, “uh”, “hmm”, and “haan” while the agent is speaking, and only stops TTS when the user speaks a meaningful interruption.
+
 
 This folder includes:
 
