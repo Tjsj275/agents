@@ -40,7 +40,7 @@ The solution meets all assignment requirements and includes optional bonus featu
 ## ⚙️ Installation & Setup
 
 ### 1️⃣ Navigate to the correct folder
-<pre> ``` cd agents/python/examples/voice_agents ``` </pre>
+<pre> ```cd agents/python/examples/voice_agents``` </pre>
 
 ### 2️⃣ (Optional) Install dependencies
 <pre> ``` pip install -r requirements.txt ``` </pre>
