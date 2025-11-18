@@ -37,7 +37,7 @@ The solution meets all assignment requirements and includes optional bonus featu
 ## Project Structure
 ``` 
   voice_agents/ ├── filler_handler.py ├── voice_agent.py ├── test_suite.py └── README.md 
-  ``` 
+``` 
 
 ## ⚙️ Installation & Setup
 
@@ -67,13 +67,19 @@ These are optional — defaults are applied without them.
 ## 🧪 Running Tests
 
 ### ▶ Run Unit Tests
-<pre> ``` python test_suite.py --unit ``` </pre>
+``` 
+python test_suite.py --unit
+``` 
 
 ### ▶ Run Integration Tests
-<pre> ``` python test_suite.py --integration ``` </pre>
+```
+python test_suite.py --integration 
+``` 
 
 ### ▶ Run All Tests
-<pre> ``` python test_suite.py ``` </pre>
+``` 
+python test_suite.py
+``` 
 
 #### Integration Scenarios Covered
   - Filler during agent speech
@@ -87,19 +93,38 @@ These are optional — defaults are applied without them.
 ## 🎙️ Running the LiveKit Voice Agent
 
 ### ▶ Start LiveKit Worker
-<pre> ``` python voice_agent.py start ``` </pre>
+``` 
+python voice_agent.py start
+``` 
 
 ### ▶ Test Mode (no LiveKit needed)
-<pre> ``` python voice_agent.py --test ``` </pre>
+``` 
+python voice_agent.py --test
+``` 
 
 ## 🧠 Interruption Logic Overview
 
-<pre> ``` if agent_is_speaking: if confidence < threshold: ignore if filler_only: ignore if mixed or real: interrupt (stop TTS) else: accept all input (filler or real) ``` </pre>
+``` 
+if agent_is_speaking: if confidence < threshold: ignore if filler_only: ignore if mixed or real: interrupt (stop TTS) else: accept all input (filler or real)
+ ``` 
 
 ## 📊 Example Test Output
 
-<pre> ``` Scenario 1: PASSED Scenario 2: PASSED Scenario 3: PASSED Scenario 4: PASSED Scenario 5: PASSED Scenario 6: PASSED Scenario 7: PASSED Handler Statistics: total_events: 9 fillers_ignored: 3 real_interruptions: 3 low_confidence_ignored: 1 ignore_rate: 33.33% ``` </pre>
----
+``` 
+Scenario 1: PASSED
+Scenario 2: PASSED
+Scenario 3: PASSED
+Scenario 4: PASSED
+Scenario 5: PASSED
+Scenario 6: PASSED
+Scenario 7: PASSED
+Handler Statistics:
+  - total_events: 9
+  - fillers_ignored: 3
+  -real_interruptions: 3
+  - low_confidence_ignored: 1
+  - ignore_rate: 33.33% ``` </pre>
+```
 
 ## 🏁 Submission Notes
 
