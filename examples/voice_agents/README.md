@@ -34,82 +34,75 @@ The solution meets all assignment requirements and includes optional bonus featu
   -Statistics tracking (ignored fillers, interruptions, event counts)
   -Complete automated test suite (unit + integration)
 
-##Project Structure
+## Project Structure
 <pre> ``` voice_agents/ ├── filler_handler.py ├── voice_agent.py ├── test_suite.py └── README.md ``` </pre>
----
 
-##⚙️ Installation & Setup
+## ⚙️ Installation & Setup
 
-###1️⃣ Navigate to the correct folder
+### 1️⃣ Navigate to the correct folder
 <pre> ``` cd agents/python/examples/voice_agents ``` </pre>
 
-###2️⃣ (Optional) Install dependencies
+### 2️⃣ (Optional) Install dependencies
 <pre> ``` pip install -r requirements.txt ``` </pre>
 
-###If missing, install manually:
+### If missing, install manually:
 <pre> ``` pip install livekit-agents openai ``` </pre>
----
 
-##🔧 Environment Variables (Optional)
+## 🔧 Environment Variables (Optional)
 
-###Add these to .env:
+### Add these to .env:
 <pre> ``` LIVEKIT_URL=wss://your-livekit-server.com LIVEKIT_API_KEY=your_api_key LIVEKIT_API_SECRET=your_secret IGNORED_FILLER_WORDS=uh,um,umm,hmm,haan,mhmm,ah,er CONFIDENCE_THRESHOLD=0.6 ``` </pre>
 These are optional — defaults are applied without them.
----
 
-##🧪 Running Tests
+## 🧪 Running Tests
 
-###▶ Run Unit Tests
+### ▶ Run Unit Tests
 <pre> ``` python test_suite.py --unit ``` </pre>
 
-###▶ Run Integration Tests
+### ▶ Run Integration Tests
 <pre> ``` python test_suite.py --integration ``` </pre>
 
-###▶ Run All Tests
+### ▶ Run All Tests
 <pre> ``` python test_suite.py ``` </pre>
 
-####Integration Scenarios Covered
--Filler during agent speech
--Real interruption
--Filler when agent quiet
--Mixed filler + command
--Low confidence murmurs
--Rapid turn-taking
--Multiple filler sequences
----
+#### Integration Scenarios Covered
+  - Filler during agent speech
+  - Real interruption
+  - Filler when agent quiet
+  - Mixed filler + command
+  - Low confidence murmurs
+  - Rapid turn-taking
+  - Multiple filler sequences
 
-##🎙️ Running the LiveKit Voice Agent
+## 🎙️ Running the LiveKit Voice Agent
 
-###▶ Start LiveKit Worker
+### ▶ Start LiveKit Worker
 <pre> ``` python voice_agent.py start ``` </pre>
 
-###▶ Test Mode (no LiveKit needed)
+### ▶ Test Mode (no LiveKit needed)
 <pre> ``` python voice_agent.py --test ``` </pre>
----
 
-##🧠 Interruption Logic Overview
+## 🧠 Interruption Logic Overview
 
 <pre> ``` if agent_is_speaking: if confidence < threshold: ignore if filler_only: ignore if mixed or real: interrupt (stop TTS) else: accept all input (filler or real) ``` </pre>
----
 
-##📊 Example Test Output
+## 📊 Example Test Output
 
 <pre> ``` Scenario 1: PASSED Scenario 2: PASSED Scenario 3: PASSED Scenario 4: PASSED Scenario 5: PASSED Scenario 6: PASSED Scenario 7: PASSED Handler Statistics: total_events: 9 fillers_ignored: 3 real_interruptions: 3 low_confidence_ignored: 1 ignore_rate: 33.33% ``` </pre>
 ---
 
-##🏁 Submission Notes
+## 🏁 Submission Notes
 
 This branch contains:
--✔ FillerWordHandler implementation
--✔ LiveKit voice agent with proper integration
--✔ Automated tests (unit + integration)
--✔ Logging, confidence filtering, and warning messages
--✔ Assignment documentation (README)
+  - ✔ FillerWordHandler implementation
+  - ✔ LiveKit voice agent with proper integration
+  - ✔ Automated tests (unit + integration)
+  - ✔ Logging, confidence filtering, and warning messages
+  - ✔ Assignment documentation (README)
 
 All required + bonus tasks have been implemented successfully.
----
 
-##👤 Author
+## 👤 Author
 
 **Tejas Joshi**
 Netaji Subhas University of Technology
