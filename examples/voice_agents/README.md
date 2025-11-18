@@ -28,11 +28,11 @@ The solution meets all assignment requirements and includes optional bonus featu
   - Works naturally within LiveKit's transcription stream
 
 ### 🎁 Bonus Features
-  -Dynamic filler-word updates (`add`, `remove`, `update`)
-  -Confidence thresholding for noisy ASR
-  -Unicode & multilingual support (e.g., "हाँ", "acha")
-  -Statistics tracking (ignored fillers, interruptions, event counts)
-  -Complete automated test suite (unit + integration)
+  - Dynamic filler-word updates (`add`, `remove`, `update`)
+  - Confidence thresholding for noisy ASR
+  - Unicode & multilingual support (e.g., "हाँ", "acha")
+  - Statistics tracking (ignored fillers, interruptions, event counts)
+  - Complete automated test suite (unit + integration)
 
 ## Project Structure
 <pre> ``` voice_agents/ ├── filler_handler.py ├── voice_agent.py ├── test_suite.py └── README.md ``` </pre>
@@ -105,5 +105,7 @@ All required + bonus tasks have been implemented successfully.
 ## 👤 Author
 
 **Tejas Joshi**
+
 Netaji Subhas University of Technology
+
 LiveKit Intelligent Interruption Handler — Step-2 Assignment
